@@ -177,33 +177,24 @@
 
 
 
- let randNum =  Math.random() * 5;
+ let randNum = Math.round( Math.random())* 5;
 
  let wholeRandNum = Math.round(randNum);
 
  console.log(wholeRandNum)
 
- let randNum = Math.round( Math.random()) * 2;
+ 
 
-let guess = prompt("guess a number  between 1 to 2 ")
+let guess = prompt("guess a number  between 1 to 5 ")
 
  if  (parseInt(guess) === randNum) {
      alert("Awesome! The number is " + randNum)
 
- } else  alert("Wrong!Try again  The number is " + randNum)
+ } else  alert("Wrong!Try again  The number is " + randNum);
 
 
 
- console.log(typeof(guess))
- console.log(typeof(randNum))
 
-
- function roundUp(num) {
-    return Math.round(num)
- }
-
- let result = roundUp(3.14) 
- document.write( "This is the " + result )
 
 
 
