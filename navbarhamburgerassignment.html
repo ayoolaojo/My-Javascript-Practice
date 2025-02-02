@@ -3,46 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript Assignment</title>
-
-    <style>
-      nav {
-        background-color: rgb(180, 180, 235);
-
-        height: 100px;
-        width: 100%;
-        padding: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-
-      li {
-        list-style-type: none;
-      }
-
-      li a {
-        text-decoration: none;
-        color: rgba(88, 3, 46, 0.993);
-      }
-
-      ul {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20px;
-      }
-    </style>
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="navbarhambugerassignment.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
+    <header>
+      <h1>G3M</h1>
+      <nav id="nav-list">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About </a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
 
-    <script src="navbarhambugerassignment.js"></script>
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About </a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
   </body>
 </html>
