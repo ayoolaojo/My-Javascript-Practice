@@ -9,6 +9,7 @@
     <h1 id="myHeading">Javascript and the Dom</h1>
 
     <p>Making a web page interactive</p>
+
     <input
       title="input the color you want for the heading"
       type="text"
@@ -20,17 +21,29 @@
     <br />
 
     <hr />
-    <p title="label">Things that are purple</p>
+    <div class="list">
+      <p title="label" class="description">Things that are purple</p>
 
-    <ul>
-      <li>Grapes</li>
-      <li class="error-not-purple">Oranges</li>
-      <li>Amethyst</li>
-      <li>Lavender</li>
-      <li class="error-not-purple">Fire trucks</li>
-      <li class="error-not-purple">Snow</li>
-      <li>Plums</li>
-    </ul>
+      <input type="text" class="description" />
+
+      <button class="description">Change list description</button>
+
+      <ul>
+        <li>Grapes</li>
+        <li class="error-not-purple">Oranges</li>
+        <li>Amethyst</li>
+        <li>Lavender</li>
+        <li class="error-not-purple">Fire trucks</li>
+        <li class="error-not-purple">Snow</li>
+        <li>Plums</li>
+      </ul>
+    </div>
+
+    <input type="text" class="addItemInput" />
+
+    <button class="addItemButton">Add list-item</button> <br /><br />
+
+    <button id="toggleList">Hide list</button>
 
     <script src="JSinteractivity.js"></script>
   </body>

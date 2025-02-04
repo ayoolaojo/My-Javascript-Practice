@@ -6,6 +6,31 @@ const ChangeColorButton = document.getElementById('myButton') ;
 
 const resetColor = document.getElementById("resetColor");
 
+const errorNotPurple = document.querySelectorAll(".error-not-purple");
+
+const myList = document.getElementsByTagName("li");
+
+const evens = document.querySelectorAll("li:nth-child(even)")
+
+const newList = document.querySelectorAll("li");
+
+const newInput = document.querySelector("input.description") ;
+
+const descriptionButton = document.querySelector("button.description") ;
+
+const descriptionP = 
+document.querySelector("p.description")
+
+const toggleList = document.getElementById("toggleList");
+
+const listDiv = document.querySelector(".list");
+
+const addItemInput = document.querySelector("input.addItemInput");
+
+const  addItemButton = document.querySelector("button.addItemButton");
+
+
+
 
 myHeading.style.color = "purple";
 
@@ -21,14 +46,14 @@ resetColor.addEventListener("click", () => {
 
 
 
-const myList = document.getElementsByTagName("li");
+
 
 for ( let i = 0; i < myList.length; i++)  {
     myList[i].style.color = "purple" 
 }
 
 
-const errorNotPurple = document.querySelectorAll(".error-not-purple");
+
 
 for ( let i = 0; i < errorNotPurple.length; i++)  {
     errorNotPurple[i].style.color = "red" 
@@ -36,14 +61,14 @@ for ( let i = 0; i < errorNotPurple.length; i++)  {
 
 
 
-const evens = document.querySelectorAll("li:nth-child(even)");
+
 
 for ( let i = 0; i < evens.length; i++)  {
     evens[i].style.background = "lightgray" 
 }
 
 
-const newList = document.querySelectorAll("li");
+
 for (let i = 0; i<newList.length;i++){
    newList[i].addEventListener("mouseover", () => {
     newList[i].textContent = newList[i].textContent.toUpperCase()
@@ -57,6 +82,35 @@ for (let i = 0; i<newList.length;i++){
 
 
 
+descriptionButton.addEventListener("click", ()=> {
+    descriptionP.textContent = newInput.value + " :"
+   newInput.value = "";
+})
+
+
+
+
+toggleList.addEventListener("click", ()=> {
+    if(listDiv.style.display =="none") {
+        toggleList.textContent="Hide list";
+
+        listDiv.style.display = "block"
+    } else {
+        toggleList.textContent = "Show list";
+        listDiv.style.display ="none"
+    }
+})
+
+
+
+
+addItemButton.addEventListener("click" , () =>{
+    let ul = document.getElementsByTagName ("ul")[0];
+    let li = document.createElement("li");
+    ul.appendChild(li);
+
+    li.textContent = addItemInput.value;
+})
 
 
 
@@ -69,48 +123,6 @@ for (let i = 0; i<newList.length;i++){
 
 
 
-// const ul = document.querySelector("#listContainer");
-
-// const input = document.querySelector("#input");
-
-// const addItem = document.querySelector("#addItem");
-
-// const removeItem = document.querySelector("#removeItem")
-
-// const li = document.getElementsByTagName("li");
-
-// const listContainer = document.getElementById('listContainer')
 
 
 
-// addItem.addEventListener("click", () => {
-//     let li = document.createElement("li");
-//     li.textContent = input.value;
-
-//     ul.appendChild(li);
-    
-//     input.value = " ";
-// })
-
-
-// removeItem.addEventListener("click", ()=> {
-//     let li = document.querySelector("li:last-child")
-//     ul.removeChild(li)
-
-
-// });
-
-
- 
-    
-
-
-
-    
-   
-
-
-// // const listItems = document.getElementsByTagName("li");
-
-// // for( i=0 ; i < listItems.length; i++){ listItems[i].addEventListener('mouseover', () => {
-// //     listItems[i].innerHTML = listIt
