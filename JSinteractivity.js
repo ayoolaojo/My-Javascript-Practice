@@ -29,6 +29,12 @@ const addItemInput = document.querySelector("input.addItemInput");
 
 const  addItemButton = document.querySelector("button.addItemButton");
 
+const removeItemButton = document.querySelector("button.removeItemButton");
+
+
+
+
+
 
 
 
@@ -81,6 +87,21 @@ for (let i = 0; i<newList.length;i++){
 
 
 
+    //  listDiv.addEventListener("mouseover", (event) => {
+    //     if(event.target.Tagname =="LI") {
+    //  event.target.textContent = event.target.textContent.toUpperCase() }
+    // });
+ 
+    // listDiv.addEventListener("mouseout",(event)=> {
+    //     if (event.target.Tagname == "LI") {
+    //     event.target.textContent= event.target.textContent.toLowerCase() }
+    // })
+
+   
+ 
+
+
+
 
 descriptionButton.addEventListener("click", ()=> {
     descriptionP.textContent = newInput.value + " :"
@@ -110,6 +131,17 @@ addItemButton.addEventListener("click" , () =>{
     ul.appendChild(li);
 
     li.textContent = addItemInput.value;
+    addItemInput.value = ""
+})
+
+
+    
+removeItemButton.addEventListener("click", () => {
+    let ul = document.getElementsByTagName ("ul")[0];
+
+    let li = document.querySelector("li:last-child")
+
+    ul.removeChild(li)
 })
 
 
